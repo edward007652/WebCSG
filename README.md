@@ -26,6 +26,12 @@ The project follows a **Tree-based Constructive Solid Geometry (CSG)** architect
 - **Limited Primitives:** Currently, only Box and Cylinder are supported to demonstrate the core concept. Adding more primitives (Spheres, Cones) would require expanding the TypeScript definitions and the OpenCASCADE generation logic.
 
 
+### 4. Import / Export JSON (State Persistence)
+
+To maintain the non-destructive nature of the application across sessions, we implemented JSON import/export functionality:
+- **Export JSON:** Serializes the entire CSG tree structure (including all nodes, parameters, positions, and operation types) along with the current camera view state into a `.json` file. This allows users to save their parametric workspace exactly as it is, preserving the "source of truth".
+- **Import JSON:** Reads a previously saved `.json` file and overrides the current React state. The application immediately triggers a re-evaluation of the imported tree, perfectly restoring the 3D model and camera angle without any loss of editability.
+
 ## Detailed Architecture
 
 The project follows a **Tree-based Constructive Solid Geometry (CSG)** architecture.

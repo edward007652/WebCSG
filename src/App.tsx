@@ -433,6 +433,9 @@ export default function App() {
               />
             </label>
           </div>
+          <div style={{ fontSize: '0.8em', color: '#bdc3c7', marginTop: '8px', textAlign: 'center', lineHeight: '1.4' }}>
+            Export/Import the entire parametric model<br/>(CSG Tree & Camera State) to a JSON file.
+          </div>
         </div>
       </div>
 
